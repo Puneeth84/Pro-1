@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarala Enterprises</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Left Sidebar Navigation */
+        aside {
+            width: 260px;
+            background: #2c3e50;
+            color: #fff;
+            padding: 2rem 1.5rem;
+            position: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 4px 0 10px rgba(0,0,0,0.05);
+        }
+
+        aside .logo h2 {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.5px;
+            color: #ecf0f1;
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 0.8rem;
+        }
+
+        aside nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        aside nav ul li a {
+            color: #bdc3c7;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: block;
+            padding: 0.6rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        aside nav ul li a:hover {
+            background: #34495e;
+            color: #fff;
+            padding-left: 1.3rem;
+        }
+
+        .sidebar-footer {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            text-align: center;
+        }
+
+        /* Main Content Area */
+        main {
+            margin-left: 260px;
+            flex: 1;
+            padding: 3rem 4rem;
+        }
+
+        /* Hero Welcome Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: #fff;
+            padding: 3.5rem 3rem;
+            border-radius: 10px;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #bdc3c7;
+        }
+
+        /* Content Sections */
+        section {
+            background: #fff;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border-left: 4px solid #1abc9c;
+        }
+
+        section h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        section p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+
+        .product-card {
+            background: #f8f9fa;
+            padding: 1.2rem;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+            font-weight: 500;
+            color: #2c3e50;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+            border-color: #1abc9c;
+        }
+
+        /* Contact Link */
+        .contact-email {
+            display: inline-block;
+            margin-top: 0.8rem;
+            color: #1abc9c;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            aside {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 1.5rem;
+            }
+            aside .logo h2 {
+                margin-bottom: 1rem;
+            }
+            aside nav ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            main {
+                margin-left: 0;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Left Sidebar Navigation -->
+    <aside>
+        <div class="logo">
+            <h2>Jai Ganesh Papad</h2>
+            <nav>
+                <ul>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#phone">Phone / Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar-footer">
+            <p>&copy; 2026 Jai Ganesh Papad</p>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Welcome Section -->
+        <div class="hero">
+            <h1>Welcome to Jai Ganesh Papad</h1>
+            <p>Your trusted destination for traditional, premium-quality food products.</p>
+        </div>
+
+        <!-- Products Section -->
+        <section id="products">
+            <h3>Products</h3>
+            <p>Discover our delicious range of crispy and flavorful papads manufactured with utmost care:</p>
+            <div class="products-grid">
+                <div class="product-card">Plain Papad</div>
+                <div class="product-card">Garlic Papad</div>
+                <div class="product-card">Red Chilli Papad</div>
+                <div class="product-card">Cumin Papad</div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h3>About Us</h3>
+            <p>Sarala Enterprises started in 2017. We are dedicated to delivering the best quality food products to our customers, blending traditional recipes with modern standards to ensure exceptional taste and hygiene.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="phone">
+            <h3>+91 900000000 & Contact</h3>
+            <p>Have questions or want to place an order? Get in touch with us via email:</p>
+            <a href="mailto:saralaaskht@gmail.com" class="contact-email">✉️ saralaaskht@gmail.com</a>
+        </section>
+    </main>
+
+</body>
+</html>
+
